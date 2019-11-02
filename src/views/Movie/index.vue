@@ -1,25 +1,30 @@
 <template>
-  <div class="main">
+  <div id="main">
     <!-- 头部标题 -->
     <Header title="电影"></Header>
     <!-- 中间内容 -->
       <div id="content">
-          <div class="movie_menu" >
-            <router-link to="/movie/city" class="city_name" tag="div">
-					    <span>大连</span>
-              <i class="iconfont icon-lower-triangle"></i>
-				    </router-link>
-            <div class="hot_swtich">
-              <router-link to="/movie/now" class="hot_item" tag="div">正在热映</router-link>
-              <router-link to="/movie/comming" class="hot_item" tag="div">即将上映</router-link>
-            </div>
-            <router-link to="/movie/search" class="search_entry" tag="div">
-              <i class="iconfont icon-sousuo"></i>
-            </router-link>
+        <!-- 二级路由 菜单 -->
+        <div class="movie_menu" >
+          <!-- 选择城市 -->
+          <router-link to="/movie/city" class="city_name" tag="div">
+					  <span>大连</span>
+            <i class="iconfont icon-lower-triangle"></i>
+				  </router-link>
+          <div class="hot_swtich">
+            <!-- 正在热映和即将上映 -->
+            <router-link to="/movie/now" class="hot_item" tag="div">正在热映</router-link>
+            <router-link to="/movie/comming" class="hot_item" tag="div">即将上映</router-link>
           </div>
-          <keep-alive>
-            <router-view/>
-          </keep-alive> 
+          <!-- 搜索 -->
+          <router-link to="/movie/search" class="search_entry" tag="div">
+            <i class="iconfont icon-sousuo"></i>
+          </router-link>
+        </div>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive> 
+        
       </div>
       
       <!-- 底部导航栏 -->
