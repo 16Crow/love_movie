@@ -1,6 +1,5 @@
 <template>
-  <div id="content">
-      <div class="login_body">
+    <div class="login_body">
         <div>
             <input class="login_text" type="text" placeHolder="账户名/手机号/Email" >
         </div>
@@ -15,7 +14,6 @@
             <a href="#">找回密码</a>
         </div>
     </div>
-  </div>
 </template>
 
 <script>

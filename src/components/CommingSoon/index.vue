@@ -1,8 +1,9 @@
 <template>
-  <div id="content">
-			<div class="movie_body">
+	<div class="movie_body">
+		<loading v-if="isLoading"></loading>
+		<Scroller v-else>
 				<ul>
-					<li v-for="m in commingList" :key="m.id">
+					<li v-for="m in commingList" :key="m.id" @tap="handleToDetails(m.id)">
 						<div class="pic_show"><img :src="m.img | setWH('128.180')"></div>
 						<div class="info_list">
 							<h2>{{ m.nm }}</h2>
@@ -15,8 +16,8 @@
 						</div>
 					</li>
 				</ul>
-			</div>
-  </div>
+		</Scroller>
+  	</div>
 </template>
 
 <script>
@@ -24,15 +25,28 @@ export default {
 	name: 'CommingSoon',
 	data () {
 		return {
-			commingList: []
+			commingList: [],
+			isLoading: true,
+			prevCity: -1
 		}
 	},
-	mounted () {
-		this.axios.get('/api/movieComingList?cityId=10').then((res) => {
+	methods: {
+		// 点击列表事件
+        handleToDetails (id) {
+			this.$router.push('/movie/detail/2/' + id)
+		}
+	},
+	activated () {
+		var cityId = this.$store.state.city.id
+		if (cityId === this.prevCity) { return }
+		this.isLoading = true
+		this.axios.get('/api/movieComingList?cityId=' + cityId).then((res) => {
 			// console.log(res)
 			var msg = res.data.msg
 			if (msg === 'ok') {
 				this.commingList = res.data.data.comingList
+				this.isLoading = false
+				this.prevCity = cityId
 			}
 			// console.log(this.commingList)
 		})

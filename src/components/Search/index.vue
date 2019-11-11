@@ -46,14 +46,13 @@ export default {
       // 当message发生改变的时候触发
       message (newVal) {
         var that = this
+        var cityId = this.$store.state.city.id
         this.cancelRequest()
-        this.axios.get('/api/searchList?cityId=10&kw=' + newVal, {
+        this.axios.get('/api/searchList?cityId='+ cityId +'&kw=' + newVal, {
           cancelToken : new this.axios.CancelToken(function (c) {
-            console.log(111)
             that.source = c
           })
         }).then((res) => {
-          // console.log(res)
           var msg = res.data.msg
           var movies = res.data.data.movies
           // 只有当msg不出错且有搜索结果才展示

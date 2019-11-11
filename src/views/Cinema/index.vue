@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div id="main">
     <Header title="影院"></Header>
     	<div id="content">
 			<div class="cinema_menu">
@@ -13,9 +13,10 @@
 					特色 <i class="iconfont icon-lower-triangle"></i>
 				</div>
 			</div>
-			<ci-list></ci-list>	
+			<keep-alive>
+				<ci-list></ci-list>
+			</keep-alive>
     	</div>
-	
     <Tab-Bar></Tab-Bar>
   </div>
 </template>

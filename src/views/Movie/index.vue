@@ -8,7 +8,7 @@
         <div class="movie_menu" >
           <!-- 选择城市 -->
           <router-link to="/movie/city" class="city_name" tag="div">
-					  <span>大连</span>
+					  <span>{{ $store.state.city.nm }}</span>
             <i class="iconfont icon-lower-triangle"></i>
 				  </router-link>
           <div class="hot_swtich">
@@ -24,22 +24,23 @@
         <keep-alive>
           <router-view></router-view>
         </keep-alive> 
-        
       </div>
-      
       <!-- 底部导航栏 -->
     <Tab-Bar></Tab-Bar>
+    <router-view name="detail"></router-view>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import TabBar from '@/components/TabBar'
+import Detail from './detail.vue'
 export default {
   name: 'Movie',
   components: {
     Header,
-    TabBar
+    TabBar,
+    Detail
   }
 }
 </script>
