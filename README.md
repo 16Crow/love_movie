@@ -33,7 +33,7 @@ npm run serve
 
 ## 界面展示
 正在热映  
-![image](docImg/movie_now.png)  
+![image](https://github.com/16Crow/love_movie/blob/master/docImg/cinemaList.png)  
 即将上映  
 ![image](docImg/movie_comming.png)  
 搜索  
