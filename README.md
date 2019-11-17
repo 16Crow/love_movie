@@ -41,6 +41,6 @@ npm run serve
 定位城市  
 ![image](https://github.com/16Crow/love_movie/blob/master/docImg/movie_location.png)  
 影院列表  
-![image](https://github.com/16Crow/love_movie/blob/master/docImg/movie_cinemaList.png)  
+![image](https://github.com/16Crow/love_movie/blob/master/docImg/cinemaList.png)  
 我的  
-![image](https://github.com/16Crow/love_movie/blob/master/docImg/movie_mine.png)  
+![image](https://github.com/16Crow/love_movie/blob/master/docImg/mine.png)  
