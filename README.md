@@ -32,15 +32,15 @@ npm run serve
 - [x] axios
 
 ## 界面展示
-正在热映
-![image](docImg/movie_now.png)
-即将上映
-![image](docImg/movie_comming.png)
-搜索
-![image](docImg/movie_search.png)
-定位城市
-![image](docImg/movie_location.png)
-影院列表
-![image](docImg/cinemaList.png)
-我的
-![image](docImg/mine.png)
+正在热映  
+![image](docImg/movie_now.png)  
+即将上映  
+![image](docImg/movie_comming.png)  
+搜索  
+![image](docImg/movie_search.png)  
+定位城市  
+![image](docImg/movie_location.png)  
+影院列表  
+![image](docImg/cinemaList.png)  
+我的  
+![image](docImg/mine.png)  
