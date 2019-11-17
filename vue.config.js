@@ -1,4 +1,5 @@
 module.exports = {
+    // publicPath: '/lovemovie',
     devServer: {
         // 反向代理
         proxy: {
